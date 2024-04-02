@@ -127,38 +127,7 @@ python setup.py install" tabindex="0" role="button">
     <span class="pl-en">print</span>(<span class="pl-s">f'Question: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">question</span><span class="pl-kos">}</span></span>'</span>)
     <span class="pl-en">print</span>(<span class="pl-s">"Time consuming: {:.2f}s"</span>.<span class="pl-en">format</span>(<span class="pl-s1">time</span>.<span class="pl-en">time</span>() <span class="pl-c1">-</span> <span class="pl-s1">start_time</span>))
     <span class="pl-en">print</span>(<span class="pl-s">f'Answer: <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-en">response_text</span>(<span class="pl-s1">response</span>)<span class="pl-kos">}</span></span><span class="pl-cce">\n</span>'</span>)</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="import time
-
-
-def response_text(openai_resp):
-    return openai_resp['choices'][0]['message']['content']
-
-print(&quot;Cache loading.....&quot;)
-
-# To use GPTCache, that's all you need
-# -------------------------------------------------
-from gptcache import cache
-from gptcache.adapter import openai
-
-cache.init()
-cache.set_openai_key()
-# -------------------------------------------------
-
-question = &quot;what's github&quot;
-for _ in range(2):
-    start_time = time.time()
-    response = openai.ChatCompletion.create(
-      model='gpt-3.5-turbo',
-      messages=[
-        {
-            'role': 'user',
-            'content': question
-        }
-      ],
-    )
-    print(f'Question: {question}')
-    print(&quot;Time consuming: {:.2f}s&quot;.format(time.time() - start_time))
-    print(f'Answer: {response_text(response)}\n')" tabindex="0" role="button">
+   
       <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
     <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
 </svg>
